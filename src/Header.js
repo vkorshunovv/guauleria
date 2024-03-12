@@ -2,8 +2,13 @@ import "./Header.css";
 
 export default function Header() {
   return (
-    <div id="header" className="container">
+    <div className="header">
+        <section className="topHeader">
 
+        </section>
+        <section className="bottomHeader">
+
+        </section>
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.hero {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 545px;
+width: 1470px;
+}
+
+.mainHero {
+    margin: 0 25px 0 25px;
+    height: 497px;
+    background-color: #3C39A0;
+    border-radius: 30px;
+    width: 1420px;
+}
