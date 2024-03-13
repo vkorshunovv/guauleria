@@ -1,9 +1,10 @@
 .App {
   height: 946px;
+  width: fit-content;
   padding-top: 25px;
   background-color: #4B65C5;
   font-family: "Onest", sans-serif ;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }

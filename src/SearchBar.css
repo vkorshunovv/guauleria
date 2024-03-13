@@ -1,9 +1,66 @@
 .searchBar {
     position: absolute;
-    /* z-index: 10; */
     height: 96px;
     width: 803px;
-    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
     border-radius: 600px;
     bottom: 0px;
+}
+
+.searchVariants {
+    display: flex;
+    height: 96px;
+}
+
+.searchPet {
+    width: 134px;
+    height: auto;
+    border-radius: 90px;
+    border: solid 1px rgba(122, 94, 236, 0.11);
+}
+
+.searchPet:hover {
+    background-color: rgba(209, 234, 183, 1);
+}
+
+.searchBreed {
+    width: 206px;
+    height: auto;
+    border-radius: 0 90px 90px 0;
+    border-right: solid 1px rgba(122, 94, 236, 0.11);
+    overflow: hidden;
+}
+
+.searchBreed:hover {
+    background-color: rgba(209, 234, 183, 1);
+}
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 170px;
+    height: 80px;
+    border-radius: 90px;
+    margin-right: 10px;
+    background-color: rgba(255, 72, 32, 1);
+}
+
+.searchButton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 80px;
+    text-decoration: none;
+    border-radius: 90px;
+}
+
+.searchButton a p {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
 }

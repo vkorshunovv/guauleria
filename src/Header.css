@@ -3,13 +3,16 @@
     grid-template-columns: repeat(12, 1fr [col-start]);
     grid-template-rows: repeat(2, 1fr [row-start]);
     column-gap: 30px;
-    margin: 0 25px 0 25px;
+    /* margin: 0 25px 0 25px; */
     height: 110px;
+    width: 1470px;
+    justify-items: center;
 }
 
 .topHeader {
     grid-column: 1/-1;
     grid-row: span 1;
+    width: 1420px;
 }
 
 .bottomHeader {
@@ -17,4 +20,5 @@
     grid-row: span 2;
     background-color: #FFFFFF;
     border-radius: 90px;
+    width: 1420px;
 }
