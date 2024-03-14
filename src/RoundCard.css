@@ -1,0 +1,12 @@
+.roundCardContainer {
+    width: 209px;
+    height: 209px;
+    border-radius: 752.8px;
+    background-color: rgba(114, 94, 236, 1);
+}
+
+
+.roundCardContainer img {
+    width:100%;
+    height: 100%;
+}
