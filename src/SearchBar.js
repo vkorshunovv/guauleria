@@ -2,8 +2,8 @@ import "./SearchBar.css";
 
 export default function SearchBar() {
   return (
-    <div className="searchBar">
-      <section className="searchVariants">
+    <form className="searchBar">
+      <section className="searchSections">
         <div className="searchPet"></div>
         <div className="searchBreed"></div>
       </section>
@@ -12,6 +12,6 @@ export default function SearchBar() {
           <p>Find now</p>
         </a>
       </section>
-    </div>
+    </form>
   );
 }

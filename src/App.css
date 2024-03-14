@@ -8,3 +8,9 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "ttTravels";
+  src: url("./TT\ Travels\ Trial\ ExtraBold.ttf");
+  font-weight: 800;
+  }
