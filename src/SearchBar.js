@@ -8,7 +8,7 @@ export default function SearchBar() {
         <div className="searchBreed"></div>
       </section>
       <section className="searchButton">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer" className="" >
           <p>Find now</p>
         </a>
       </section>

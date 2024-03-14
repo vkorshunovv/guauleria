@@ -1,5 +1,7 @@
 import "./Header.css";
-import userLogin from "../src/assets/userLogin.png"
+import userLogin from "../src/assets/userLogin.png";
+import clock from "../src/assets/clock.png";
+import location from "../src/assets/Location.png";
 
 export default function Header() {
   return (
@@ -23,8 +25,12 @@ export default function Header() {
             <p>guaulería</p>
           </div>
           <div className="lastHeaderCol">
-            <button className="userLogOut" type="button">Log out</button>
-            <a href="#"><img src={userLogin}/></a>
+            <button className="userLogOut" type="button">
+              Log out
+            </button>
+            <a href="#">
+              <img src={userLogin} />
+            </a>
           </div>
         </div>
       </section>
@@ -46,7 +52,20 @@ export default function Header() {
               </li>
             </menu>
           </div>
-          <div className="lastHeaderCol"></div>
+          <div className="lastHeaderCol">
+            <div className="clock">
+              <div className="clockImg">
+                <img src={clock} />
+                <p>24/7</p>
+              </div>
+            </div>
+            <div className="location">
+              <div className="locationImg">
+                <img src={location} />
+                <p>Madrid</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

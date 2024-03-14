@@ -106,6 +106,11 @@
     margin: 0;
 }
 
+.logoMain p:hover {
+    color: rgba(209, 234, 183, 1);
+    cursor: pointer;
+}
+
 .upperHeader .headerContainer {
     align-items: start;
 }
@@ -118,10 +123,14 @@
     font-size: 16px;
 }
 
+.userLogOut:hover {
+    color: rgba(209, 234, 183, 1);
+}
+
 .userLogOut a {
-width: 34px;
-height: 34px;
-border-radius: 90px;
+    width: 34px;
+    height: 34px;
+    border-radius: 90px;
 }
 
 .headerContainer img {
@@ -129,3 +138,37 @@ border-radius: 90px;
     height: 34px;
 }
 
+.headerContainer img:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+.headerContainer img:not(:hover) {
+    transform: scale(1);
+    transition: .2s;
+}
+
+.bottomHeader .lastHeaderCol {
+    gap: 35px;
+}
+
+.clockImg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clockImg img {
+    width: 15px;
+    height: 15px;
+}
+
+.locationImg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.locationImg img {
+    width: 12px;
+    height: 16.36px;
+}
