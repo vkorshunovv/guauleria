@@ -33,3 +33,36 @@
     align-items: end;
     justify-content: space-between;
 }
+
+.heroText {
+    grid-column: 1/-1;
+    grid-row: span 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroText article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: "ttTravels", sans-serif;
+    font-size: 62px;
+}
+
+.heroText article p {
+    margin: 0;
+    padding: 0;
+}
+
+.heroText article p:first-child {
+    font-family: "ttTravelsDemi", sans-serif;
+}
+
+.heroText article p:last-child {
+    padding-bottom: 48px;
+    margin-top: -10px;
+}

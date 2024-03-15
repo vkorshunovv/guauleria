@@ -1,9 +1,9 @@
-import "./RoundCard.css"
+import "./RoundCard.css";
 
-export default function RoundCard({img}) {
-    return (
+export default function RoundCard({ img }) {
+  return (
     <div className="roundCardContainer">
-        <img src={img}/>
+      <img src={img} />
     </div>
-    )
+  );
 }

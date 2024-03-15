@@ -12,5 +12,9 @@
 @font-face {
   font-family: "ttTravels";
   src: url("./TT\ Travels\ Trial\ ExtraBold.ttf");
-  font-weight: 800;
+  }
+
+  @font-face {
+    font-family: "ttTravelsDemi";
+    src: url("./TT\ Travels\ Trial\ DemiBold.ttf");
   }

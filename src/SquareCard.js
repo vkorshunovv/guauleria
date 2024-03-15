@@ -1,9 +1,9 @@
-import "./SquareCard.css"
+import "./SquareCard.css";
 
-export default function SquareCard({img}) {
-    return (
-        <div className="squareCardContainer">
-            <img src={img}/>
-        </div>
-    )
+export default function SquareCard({ img }) {
+  return (
+    <div className="squareCardContainer">
+      <img src={img} />
+    </div>
+  );
 }

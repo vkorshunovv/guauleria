@@ -19,13 +19,18 @@ export default function Hero() {
           <section className="cardsContainer">
             {cards.map((card) =>
               card % 2 === 0 ? (
-                <SquareCard key={card} img={imgPets[card]}/>
+                <SquareCard key={card} img={imgPets[card]} />
               ) : (
-                <RoundCard key={card} img={imgPets[card]}/>
+                <RoundCard key={card} img={imgPets[card]} />
               )
             )}
           </section>
-          <section></section>
+          <section className="heroText">
+            <article>
+              <p>The biggest platform</p>
+              <p>for animals</p>
+            </article>
+          </section>
         </div>
       </div>
       <SearchBar />
