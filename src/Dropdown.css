@@ -15,6 +15,69 @@
 }
 
 .petDropdown {
+    grid-column: 1 / 5;
+    width: 223px;
+    height: 196px;
+    background-color: rgba(60, 57, 160, 1);
+    border-radius: 16px;
+}
+
+.petInnerContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 15px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.searchInput {
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/* Do we need search icon in search field?.. */
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input {
+    padding-left: 16px;
+    padding-right: 10px;
+    color: rgba(22, 26, 35, 1);
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 166px 10px;
+    background-image: url(./assets/Group.png);
+    background-size: 16px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: rgba(22, 26, 35, .5);
+}
+
+.searchOuter img {
+    width: 16px;
+    height: 16px;
+}
+
+.breedDropdown {
+    display: none;
+    grid-column: 5 / 10;
     width: 223px;
     height: 196px;
     background-color: rgba(60, 57, 160, 1);
