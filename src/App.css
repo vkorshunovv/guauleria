@@ -10,8 +10,13 @@
 }
 
 @font-face {
-  font-family: "ttTravels";
-  src: url("./TT\ Travels\ Trial\ ExtraBold.ttf");
+    font-family: "ttTravels";
+    src: url("./TT\ Travels\ Trial\ ExtraBold.ttf");
+  }
+
+  @font-face {
+    font-family: "ttTravelsBlack";
+    src: url("./TT\ Travels\ Trial\ Black.ttf");
   }
 
   @font-face {
