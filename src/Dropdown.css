@@ -1,0 +1,22 @@
+.dropdown {
+    width: auto;
+    height: 291px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdownArea {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [col-start]);
+    column-gap: 30px;
+    height: 100%;
+    width: 803px;
+    margin-top: 13px;
+}
+
+.petDropdown {
+    width: 223px;
+    height: 196px;
+    background-color: rgba(60, 57, 160, 1);
+    border-radius: 16px;
+}
