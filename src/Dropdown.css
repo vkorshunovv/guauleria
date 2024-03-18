@@ -1,3 +1,11 @@
+.showPet {
+    display: none;
+}
+
+.showBreed {
+    display: none;
+}
+
 .dropdown {
     width: auto;
     height: 291px;
@@ -91,11 +99,10 @@ input::placeholder {
 }
 
 
-/* .breedDropdown {
-    display: none;
+.breedDropdown {
     grid-column: 5 / 10;
     width: 223px;
     height: 196px;
     background-color: rgba(60, 57, 160, 1);
     border-radius: 16px;
-} */
+}

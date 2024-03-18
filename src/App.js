@@ -1,15 +1,24 @@
+import { useState } from "react";
+
 import "./App.css";
 import Dropdown from "./Dropdown";
 import Header from "./Header.js";
 import Hero from "./Hero.js";
 
-
 function App() {
+  const [isOpenPet, setOpenPet] = useState(false);
+  const revealPet = () => {
+    setOpenPet(!isOpenPet);
+  };
+  const [isOpenBreed, setOpenBreed] = useState(false);
+  const revealBreed = () => {
+    setOpenBreed(!isOpenBreed);
+  };
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <Dropdown />
+      <Hero isOpenPet={isOpenPet} isOpenBreed={isOpenBreed} revealPet={revealPet} revealBreed={revealBreed} />
+      <Dropdown isOpenPet={isOpenPet} isOpenBreed={isOpenBreed} />
     </div>
   );
 }

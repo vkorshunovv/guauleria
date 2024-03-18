@@ -29,6 +29,7 @@
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     z-index: 1;
+    cursor: pointer;
 }
 
 .searchPet:hover {
@@ -86,6 +87,7 @@
     box-sizing: border-box;
     z-index: 0;
     padding-left: 234px;
+    cursor: pointer;
 }
 
 .searchBreed:hover {
