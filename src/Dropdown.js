@@ -1,9 +1,13 @@
 import "./Dropdown.css";
-import "./DropdownList.js"
+import "./DropdownList.js";
 
 import DropdownList from "./DropdownList.js";
 
+import pet_search_1 from "../src/assets/Pet_1_search.png";
+import pet_search_2 from "../src/assets/Pet_2_search.png";
+
 export default function Dropdown() {
+  const petsList = [1, 2, 3, 4, 5, 6, 7];
   return (
     <div className="dropdown">
       <section className="dropdownArea">
@@ -14,7 +18,15 @@ export default function Dropdown() {
               type="search"
               placeholder="Search..."
             />
-            <DropdownList />
+            <div className="searchableList">
+              {petsList.map((pet, index) => (
+                <DropdownList
+                  key={index}
+                  pet_search={pet % 2 === 0 ? pet_search_1 : pet_search_2}
+                  title ={pet % 2 === 0 ? "Cat" : "Chinchilla"}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className="breedDropdown"></div>
