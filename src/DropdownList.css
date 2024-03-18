@@ -1,0 +1,54 @@
+.searchableList {
+    position: relative;
+    width: 223px;
+    height: 130px;
+    top: 18px;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+}
+
+.searchableItem {
+    position: absolute;
+    width: 223px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 18px;
+}
+
+.searchableItem:hover {
+    border-left: 3px solid rgba(209, 234, 183, 1);
+    background-color: rgba(57, 42, 119, 1);
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+.searchableItem p {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.searchableItem div {
+    background-color: rgba(57, 42, 119, 1);
+    background-size: 35px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchableItem:hover div {
+    background-color: rgba(60, 57, 160, 1);
+}
+
+.searchableItem img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    bottom: 0;
+}

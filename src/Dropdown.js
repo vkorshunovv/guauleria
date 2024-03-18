@@ -1,4 +1,7 @@
 import "./Dropdown.css";
+import "./DropdownList.js"
+
+import DropdownList from "./DropdownList.js";
 
 export default function Dropdown() {
   return (
@@ -11,7 +14,7 @@ export default function Dropdown() {
               type="search"
               placeholder="Search..."
             />
-            <div className="searchableList"></div>
+            <DropdownList />
           </div>
         </div>
         <div className="breedDropdown"></div>
