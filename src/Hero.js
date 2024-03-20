@@ -33,7 +33,10 @@ export default function Hero({ revealPet, revealBreed }) {
           </section>
         </div>
       </div>
-      <SearchBar revealPet={revealPet} revealBreed={revealBreed} />
+      <SearchBar
+        revealPet={revealPet}
+        revealBreed={revealBreed}
+      />
     </div>
   );
 }

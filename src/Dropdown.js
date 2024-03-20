@@ -6,12 +6,15 @@ import DropdownList from "./DropdownList.js";
 import pet_search_1 from "../src/assets/Pet_1_search.png";
 import pet_search_2 from "../src/assets/Pet_2_search.png";
 
-export default function Dropdown({ isOpenPet, isOpenBreed }) {
+export default function Dropdown({ isOpenPet, isOpenBreed, componentRef }) {
   const petsList = [1, 2, 3, 4, 5, 6, 7];
   return (
     <div className="dropdown">
       <section className="dropdownArea">
-        <div className={`petDropdown ${isOpenPet ? "" : "showPet"}`}>
+        <div
+          className={`petDropdown ${isOpenPet ? "" : "showPet"}`}
+          ref={componentRef}
+        >
           <div className="petInnerContainer">
             <input
               className="searchInput"
@@ -29,7 +32,10 @@ export default function Dropdown({ isOpenPet, isOpenBreed }) {
             </div>
           </div>
         </div>
-        <div className={`breedDropdown ${isOpenBreed ? "" : "showBreed"}`}>
+        <div
+          className={`breedDropdown ${isOpenBreed ? "" : "showBreed"}`}
+          ref={componentRef}
+        >
           <div className="petInnerContainer">
             <input
               className="searchInput"
