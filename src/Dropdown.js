@@ -11,7 +11,7 @@ export default function Dropdown({ isOpenPet, isOpenBreed }) {
   return (
     <div className="dropdown">
       <section className="dropdownArea">
-        <div className={`petDropdown ${isOpenPet ? "showPet" : ""}`}>
+        <div className={`petDropdown ${isOpenPet ? "" : "showPet"}`}>
           <div className="petInnerContainer">
             <input
               className="searchInput"
@@ -29,7 +29,7 @@ export default function Dropdown({ isOpenPet, isOpenBreed }) {
             </div>
           </div>
         </div>
-        <div className={`breedDropdown ${isOpenBreed ? "showBreed" : ""}`}>
+        <div className={`breedDropdown ${isOpenBreed ? "" : "showBreed"}`}>
           <div className="petInnerContainer">
             <input
               className="searchInput"

@@ -9,10 +9,12 @@ function App() {
   const [isOpenPet, setOpenPet] = useState(false);
   const revealPet = () => {
     setOpenPet(!isOpenPet);
+    setOpenBreed(false)
   };
   const [isOpenBreed, setOpenBreed] = useState(false);
   const revealBreed = () => {
     setOpenBreed(!isOpenBreed);
+    setOpenPet(false)
   };
   return (
     <div className="App">
