@@ -9,7 +9,7 @@ import pet_4 from "./assets/Round_2.png";
 import pet_5 from "./assets/Rectangle_3.png";
 import pet_6 from "./assets/Round_3.png";
 
-export default function Hero({ revealPet, revealBreed }) {
+export default function Hero({ revealPet, revealBreed, petTitle, breedTitle }) {
   const cards = [0, 1, 2, 3, 4, 5];
   const imgPets = [pet_1, pet_2, pet_3, pet_4, pet_5, pet_6];
   return (
@@ -36,6 +36,8 @@ export default function Hero({ revealPet, revealBreed }) {
       <SearchBar
         revealPet={revealPet}
         revealBreed={revealBreed}
+        petTitle={petTitle}
+        breedTitle={breedTitle}
       />
     </div>
   );

@@ -6,6 +6,9 @@ import Header from "./Header.js";
 import Hero from "./Hero.js";
 
 function App() {
+  const [petTitle, setPetTitle] = useState("Dog");
+  const [breedTitle, setBreedTitle] = useState("German Shepherd");
+
   const [isOpenPet, setOpenPet] = useState(false);
   const revealPet = () => {
     setOpenPet(!isOpenPet);
@@ -17,13 +20,16 @@ function App() {
     setOpenPet(false);
   };
 
-  const componentRef = useRef(null);
+  const petComponentRef = useRef(null);
+  const breedComponentRef = useRef(null)
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (
-        componentRef.current &&
-        !componentRef.current.contains(event.target) &&
+        petComponentRef.current &&
+        breedComponentRef &&
+        !petComponentRef.current.contains(event.target) &&
+        !breedComponentRef.current.contains(event.target) &&
         !event.target.className.includes("searchPet") &&
         !event.target.className.includes("searchBreed")
       ) {
@@ -47,11 +53,19 @@ function App() {
         isOpenBreed={isOpenBreed}
         revealPet={revealPet}
         revealBreed={revealBreed}
+        petTitle={petTitle}
+        breedTitle={breedTitle}
       />
       <Dropdown
         isOpenPet={isOpenPet}
         isOpenBreed={isOpenBreed}
-        componentRef={componentRef}
+        setOpenPet={setOpenPet}
+        setOpenBreed={setOpenBreed}
+        petComponentRef={petComponentRef}
+        breedComponentRef={breedComponentRef}
+        title={petTitle}
+        setPetTitle={setPetTitle}
+        setBreedTitle={setBreedTitle}
       />
     </div>
   );

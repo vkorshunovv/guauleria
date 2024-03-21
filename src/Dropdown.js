@@ -6,14 +6,42 @@ import DropdownList from "./DropdownList.js";
 import pet_search_1 from "../src/assets/Pet_1_search.png";
 import pet_search_2 from "../src/assets/Pet_2_search.png";
 
-export default function Dropdown({ isOpenPet, isOpenBreed, componentRef }) {
-  const petsList = [1, 2, 3, 4, 5, 6, 7];
+export default function Dropdown({
+  isOpenPet,
+  isOpenBreed,
+  setOpenPet,
+  setOpenBreed,
+  petComponentRef,
+  breedComponentRef,
+  setPetTitle,
+  setBreedTitle,
+}) {
+  const petsCountList = [1, 2, 3, 4, 5, 6, 7];
+  const petsNameList = [
+    "Dog",
+    "Cat",
+    "Rabbit",
+    "Snake",
+    "Chinchilla",
+    "Parrot",
+    "Lizard",
+  ];
+
+  const dogsBreed = [
+    "German Shepherd",
+    "Bulldog",
+    "Labrador Retriever",
+    "Husky",
+    "Beagle",
+    "Poodle",
+    "Chihuahua",
+  ];
   return (
     <div className="dropdown">
       <section className="dropdownArea">
         <div
           className={`petDropdown ${isOpenPet ? "" : "showPet"}`}
-          ref={componentRef}
+          ref={petComponentRef}
         >
           <div className="petInnerContainer">
             <input
@@ -22,11 +50,14 @@ export default function Dropdown({ isOpenPet, isOpenBreed, componentRef }) {
               placeholder="Search..."
             />
             <div className="searchableList">
-              {petsList.map((pet, index) => (
+              {petsCountList.map((pet, index) => (
                 <DropdownList
                   key={index}
                   pet_search={pet % 2 === 0 ? pet_search_1 : pet_search_2}
-                  title={pet % 2 === 0 ? "Cat" : "Chinchilla"}
+                  petName={petsNameList[index]}
+                  setPetTitle={setPetTitle}
+                  setOpenPet={setOpenPet}
+                  setOpenBreed={setOpenBreed}
                 />
               ))}
             </div>
@@ -34,7 +65,7 @@ export default function Dropdown({ isOpenPet, isOpenBreed, componentRef }) {
         </div>
         <div
           className={`breedDropdown ${isOpenBreed ? "" : "showBreed"}`}
-          ref={componentRef}
+          ref={breedComponentRef}
         >
           <div className="petInnerContainer">
             <input
@@ -43,11 +74,12 @@ export default function Dropdown({ isOpenPet, isOpenBreed, componentRef }) {
               placeholder="Search..."
             />
             <div className="searchableList">
-              {petsList.map((pet, index) => (
+              {petsCountList.map((breed, index) => (
                 <DropdownList
                   key={index}
-                  pet_search={pet % 2 === 0 ? pet_search_1 : pet_search_2}
-                  title={pet % 2 === 0 ? "Cat" : "Chinchilla"}
+                  pet_search={breed % 2 === 0 ? pet_search_1 : pet_search_2}
+                  petName={dogsBreed[index]}
+                  setPetTitle={setBreedTitle}
                 />
               ))}
             </div>
