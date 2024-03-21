@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
 import "./App.css";
-import Dropdown from "./Dropdown";
+import Dropdown from "./Dropdown.js";
 import Header from "./Header.js";
 import Hero from "./Hero.js";
 
@@ -63,7 +63,8 @@ function App() {
         setOpenBreed={setOpenBreed}
         petComponentRef={petComponentRef}
         breedComponentRef={breedComponentRef}
-        title={petTitle}
+        petTitle={petTitle}
+        breedTitle={breedTitle}
         setPetTitle={setPetTitle}
         setBreedTitle={setBreedTitle}
       />

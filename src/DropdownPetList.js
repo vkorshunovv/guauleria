@@ -1,10 +1,9 @@
-import "./DropdownList.css";
+import "./DropdownPetList.css";
 
-export default function DropdownList({ pet_search, petName, setPetTitle, setBreedTitle, setOpenPet, setOpenBreed }) {
+export default function DropdownPetList({ pet_search, petName, setPetTitle, setOpenPet, setOpenBreed }) {
 
   const handlePetTitle = () => {
     setPetTitle(petName)
-    // setBreedTitle(petName)
     setOpenPet(false)
     setOpenBreed(true)
   }

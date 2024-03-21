@@ -1,8 +1,6 @@
-import "./Dropdown.css";
-import "./DropdownList.js";
-
-import DropdownList from "./DropdownList.js";
-
+import DropdownPetList from "./DropdownPetList.js";
+import DropdownBreedList from "./DropdownBreedList.js";
+import "./Dropdown.css"
 import pet_search_1 from "../src/assets/Pet_1_search.png";
 import pet_search_2 from "../src/assets/Pet_2_search.png";
 
@@ -27,7 +25,7 @@ export default function Dropdown({
     "Lizard",
   ];
 
-  const dogsBreed = [
+  const dogsBreedList = [
     "German Shepherd",
     "Bulldog",
     "Labrador Retriever",
@@ -51,7 +49,7 @@ export default function Dropdown({
             />
             <div className="searchableList">
               {petsCountList.map((pet, index) => (
-                <DropdownList
+                <DropdownPetList
                   key={index}
                   pet_search={pet % 2 === 0 ? pet_search_1 : pet_search_2}
                   petName={petsNameList[index]}
@@ -75,11 +73,12 @@ export default function Dropdown({
             />
             <div className="searchableList">
               {petsCountList.map((breed, index) => (
-                <DropdownList
+                <DropdownBreedList
                   key={index}
-                  pet_search={breed % 2 === 0 ? pet_search_1 : pet_search_2}
-                  petName={dogsBreed[index]}
-                  setPetTitle={setBreedTitle}
+                  breed_search={breed % 2 === 0 ? pet_search_1 : pet_search_2}
+                  breedName={dogsBreedList[index]}
+                  setBreedTitle={setBreedTitle}
+                  setOpenBreed={setOpenBreed}
                 />
               ))}
             </div>
