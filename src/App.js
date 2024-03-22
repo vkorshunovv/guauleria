@@ -9,6 +9,13 @@ function App() {
   const [petTitle, setPetTitle] = useState("Dog");
   const [breedTitle, setBreedTitle] = useState("German Shepherd");
 
+  const inputRef = useRef(null);
+
+  const handleInputFocus = () => {
+    inputRef.current.focus();
+    console.log('Focus click was triggered')
+  };
+
   const [isOpenPet, setOpenPet] = useState(false);
   const revealPet = () => {
     setOpenPet(!isOpenPet);
@@ -21,7 +28,7 @@ function App() {
   };
 
   const petComponentRef = useRef(null);
-  const breedComponentRef = useRef(null)
+  const breedComponentRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -55,6 +62,8 @@ function App() {
         revealBreed={revealBreed}
         petTitle={petTitle}
         breedTitle={breedTitle}
+        inputRef={inputRef}
+        handleInputFocus={handleInputFocus}
       />
       <Dropdown
         isOpenPet={isOpenPet}
@@ -67,6 +76,8 @@ function App() {
         breedTitle={breedTitle}
         setPetTitle={setPetTitle}
         setBreedTitle={setBreedTitle}
+        inputRef={inputRef}
+        handleInputFocus={handleInputFocus}
       />
     </div>
   );

@@ -30,6 +30,10 @@
     border-radius: 16px;
 }
 
+.reducedPetDropdown {
+    height: 129px;
+}
+
 .petInnerContainer {
     display: flex;
     flex-direction: column;
@@ -79,6 +83,28 @@ input::placeholder {
     color: rgba(22, 26, 35, .5);
 }
 
+.noMatch {
+    background-color: rgba(250, 215, 207, 1);
+    height: 35px;
+}
+
+.noMatchSection {
+    display: flex;
+    flex-direction: column;
+    width: 184px;
+    padding-left: 16px;
+    padding-top: 15px;
+    gap: 3px;
+}
+
+.noMatchSection p {
+    margin: 0;
+    padding: 0;
+    font-family: "Onest", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+}
+
 .searchOuter img {
     width: 16px;
     height: 16px;
@@ -96,6 +122,10 @@ input::placeholder {
     gap: 5px;
     margin-top: 10px;
     /* overscroll-behavior-y: none; */
+}
+
+.noMatchList {
+    height: auto;
 }
 
 

@@ -14,8 +14,8 @@ export default function DropdownBreedList({
   return (
     <ul className="searchableItem" onClick={handleBreedTitle}>
       <li>{breedName}</li>
-      <div>
-        <img src={breed_search} alt={`Pet_${breedName}`} />
+      <div className="breedImg">
+        {/* <img src={breed_search} alt={`Pet_${breedName}`} /> */}
       </div>
     </ul>
   );
