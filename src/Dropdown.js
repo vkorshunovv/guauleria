@@ -3,7 +3,7 @@ import DropdownBreedList from "./DropdownBreedList.js";
 import "./Dropdown.css";
 import pet_search_1 from "../src/assets/Pet_1_search.png";
 import pet_search_2 from "../src/assets/Pet_2_search.png";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Dropdown({
   isOpenPet,
@@ -17,7 +17,6 @@ export default function Dropdown({
   inputRef,
   handleInputFocus,
 }) {
-  const petsCountList = [1, 2, 3, 4, 5, 6, 7];
   const petsNameList = [
     "Dog",
     "Cat",
@@ -38,14 +37,33 @@ export default function Dropdown({
     "Chihuahua",
   ];
 
-  const [inputText, setInputText] = useState("");
+  const [inputPetText, setInputPetText] = useState("");
   const [filteredPets, setFilteredPets] = useState(petsNameList);
+  const [inputBreedText, setInputBreedText] = useState("");
+  const [filteredBreed, setFilteredBreed] = useState(dogsBreedList);
 
-  const filteredText = (e) => {
+  // useEffect(() => {
+  //   if (isOpenPet) {
+  //     setInputPetText("");
+  //   }
+  //   if (isOpenBreed) {
+  //     setInputBreedText("");
+  //   }
+  // }, [isOpenPet, isOpenBreed]);
+
+  const filteredPetText = (e) => {
     const searchText = e.target.value.toLowerCase();
-    setInputText(searchText);
+    setInputPetText(searchText);
     setFilteredPets(
       petsNameList.filter((pet) => pet.toLowerCase().includes(searchText))
+    );
+  };
+
+  const filteredBreedText = (e) => {
+    const searchText = e.target.value.toLowerCase();
+    setInputBreedText(searchText);
+    setFilteredBreed(
+      dogsBreedList.filter((breed) => breed.toLowerCase().includes(searchText))
     );
   };
 
@@ -53,19 +71,25 @@ export default function Dropdown({
     <div className="dropdown">
       <section className="dropdownArea">
         <div
-          className={`petDropdown ${isOpenPet ? "" : "showPet"} ${filteredPets.length ? "" : "reducedPetDropdown"}`}
+          className={`petDropdown ${isOpenPet ? "" : "showPet"} ${
+            filteredPets.length ? "" : "reducedDropdown"
+          }`}
           ref={petComponentRef}
         >
           <div className="petInnerContainer">
             <input
               className={` ${filteredPets.length ? "" : "noMatch"} searchInput`}
               ref={inputRef}
-              value={inputText}
-              onInput={filteredText}
+              value={inputPetText}
+              onInput={filteredPetText}
               type="search"
               placeholder="Search..."
             />
-            <div className={`${filteredPets.length ? "" : "noMatchList"} searchableList`}>
+            <div
+              className={`${
+                filteredPets.length ? "" : "noMatchList"
+              } searchableList`}
+            >
               {filteredPets.length ? (
                 filteredPets.map((pet, index) => (
                   <DropdownPetList
@@ -75,8 +99,7 @@ export default function Dropdown({
                     setPetTitle={setPetTitle}
                     setOpenPet={setOpenPet}
                     setOpenBreed={setOpenBreed}
-                    filteredPets={filteredPets}
-                    inputText={inputText}
+                    setInputPetText={setInputPetText}
                   />
                 ))
               ) : (
@@ -89,25 +112,43 @@ export default function Dropdown({
           </div>
         </div>
         <div
-          className={`breedDropdown ${isOpenBreed ? "" : "showBreed"}`}
+          className={`breedDropdown ${isOpenBreed ? "" : "showBreed"} ${
+            filteredBreed.length ? "" : "reducedDropdown"
+          }`}
           ref={breedComponentRef}
         >
           <div className="petInnerContainer">
             <input
-              className="searchInput"
+              className={` ${
+                filteredBreed.length ? "" : "noMatch"
+              } searchInput`}
+              value={inputBreedText}
+              onInput={filteredBreedText}
               type="search"
               placeholder="Search..."
             />
-            <div className="searchableList">
-              {petsCountList.map((breed, index) => (
-                <DropdownBreedList
-                  key={index}
-                  // breed_search={breed % 2 === 0 ? pet_search_1 : pet_search_2}
-                  breedName={dogsBreedList[index]}
-                  setBreedTitle={setBreedTitle}
-                  setOpenBreed={setOpenBreed}
-                />
-              ))}
+            <div
+              className={`${
+                filteredBreed.length ? "" : "noMatchList"
+              } searchableList`}
+            >
+              {filteredBreed.length ? (
+                filteredBreed.map((breed, index) => (
+                  <DropdownBreedList
+                    key={index}
+                    breed_search={pet_search_2}
+                    breedName={breed}
+                    setBreedTitle={setBreedTitle}
+                    setOpenBreed={setOpenBreed}
+                    setInputBreedText={setInputBreedText}
+                  />
+                ))
+              ) : (
+                <div className="noMatchSection">
+                  <p>Sorry, we couldn't find anything.</p>
+                  <p>Try another phrase.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

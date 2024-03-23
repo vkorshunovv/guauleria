@@ -9,7 +9,14 @@ import pet_4 from "./assets/Round_2.png";
 import pet_5 from "./assets/Rectangle_3.png";
 import pet_6 from "./assets/Round_3.png";
 
-export default function Hero({ revealPet, revealBreed, petTitle, breedTitle, handleInputFocus, inputRef}) {
+export default function Hero({
+  revealPet,
+  revealBreed,
+  petTitle,
+  breedTitle,
+  handleInputFocus,
+  inputRef,
+}) {
   const cards = [0, 1, 2, 3, 4, 5];
   const imgPets = [pet_1, pet_2, pet_3, pet_4, pet_5, pet_6];
   return (

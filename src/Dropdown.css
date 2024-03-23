@@ -30,9 +30,6 @@
     border-radius: 16px;
 }
 
-.reducedPetDropdown {
-    height: 129px;
-}
 
 .petInnerContainer {
     display: flex;
@@ -120,7 +117,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: 10px;
+    padding-top: 10px;
     /* overscroll-behavior-y: none; */
 }
 
@@ -137,4 +134,13 @@ input::placeholder {
     border-radius: 16px;
     position: relative;
     left: -30px;
+}
+
+.reducedDropdown {
+    height: 129px;
+}
+
+.toTop {
+    position: relative;
+    top: 5px;
 }

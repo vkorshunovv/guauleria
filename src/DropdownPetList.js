@@ -6,13 +6,13 @@ export default function DropdownPetList({
   setPetTitle,
   setOpenPet,
   setOpenBreed,
-  filteredPets,
-  inputText,
+  setInputPetText,
 }) {
   const handlePetTitle = () => {
     setPetTitle(petName);
     setOpenPet(false);
     setOpenBreed(true);
+    setInputPetText("")
   };
 
   return (
