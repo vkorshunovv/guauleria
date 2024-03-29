@@ -1,0 +1,174 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [col-start]);
+    grid-template-rows: repeat(2, 1fr [row-start]);
+    column-gap: 30px;
+    height: 110px;
+    width: 1470px;
+    justify-items: center;
+}
+
+.bottomHeader {
+    grid-column: 1/-1;
+    grid-row: span 2;
+    background-color: rgb(255, 255, 255);
+    border-radius: 90px;
+    width: 1420px;
+    position: relative;
+}
+
+.headerContainer {
+    width: auto;
+    height: 55px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [col-start]);
+    gap: 30px;
+    padding: 0 53px;
+}
+
+.headerLinks {
+    width: calc(100% + 30px);
+    grid-column:span 3;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgba(22, 26, 35, 1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    color: rgba(255, 72, 32, 1);
+}
+
+.menu li a:active {
+    color: rgba(255, 72, 32, 1);
+    font-weight: 600;
+}
+
+.lastHeaderCol {
+    grid-column: col-start 10/ span 2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 13px;
+}
+
+.upperHeader {
+    grid-column: 1/-1;
+    grid-row: span 1;
+    width: 1420px;
+}
+
+.upperHeader .headerLinks {
+    align-items: start;
+    padding-top: 9px;
+}
+
+.upperHeader .headerLinks a {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.upperHeader .headerLinks a:hover {
+    color: rgba(209, 234, 183, 1);
+}
+
+.upperHeader .headerLinks a:hover {
+    color: rgba(209, 234, 183, 1);
+    font-size: 600;
+}
+
+.logoMain {
+    grid-column: col-start 4/ span 4;
+    display: flex;
+    justify-content: center;
+}
+
+.logoMain p {
+    color: rgb(255, 255, 255);
+    font-family: "ttTravels", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.logoMain p:hover {
+    color: rgba(209, 234, 183, 1);
+    cursor: pointer;
+}
+
+.upperHeader .headerContainer {
+    align-items: start;
+}
+
+.userLogOut {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.userLogOut:hover {
+    color: rgba(209, 234, 183, 1);
+}
+
+.userLogOut a {
+    width: 34px;
+    height: 34px;
+    border-radius: 90px;
+}
+
+.headerContainer img {
+    width: 34px;
+    height: 34px;
+}
+
+.headerContainer img:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+.headerContainer img:not(:hover) {
+    transform: scale(1);
+    transition: .2s;
+}
+
+.bottomHeader .lastHeaderCol {
+    gap: 35px;
+}
+
+.clockImg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clockImg img {
+    width: 15px;
+    height: 15px;
+}
+
+.locationImg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.locationImg img {
+    width: 12px;
+    height: 16.36px;
+}

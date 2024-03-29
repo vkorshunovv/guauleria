@@ -1,0 +1,139 @@
+.searchBar {
+    position: absolute;
+    height: 96px;
+    width: 803px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 600px;
+    bottom: 0px;
+}
+
+.searchSections {
+    position: relative;
+    display: flex;
+    height: 96px;
+    width: 500px;
+}
+
+.searchPet {
+    position: absolute;
+    width: 234px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    border: solid 1px rgba(122, 94, 236, 0.13);
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.searchPet:hover {
+    background-color: rgba(209, 234, 183, 1);
+    z-index: 1;
+}
+
+.searchContainer {
+    width: auto;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.upperSearchText {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.upperSearchText p {
+    font-size: 14px;
+    color: rgba(22, 26, 35, .5);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.upperSearchText img {
+    width: 15px;
+    height: 15px;
+}
+
+.searchContainer > p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: rgba(22, 26, 35, 1);
+    font-weight: 600;
+}
+
+.searchBreed {
+    position: absolute;
+    width: 500px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    border-right: solid 1px rgba(122, 94, 236, 0.19);
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    z-index: 0;
+    padding-left: 234px;
+    cursor: pointer;
+}
+
+.searchBreed:hover {
+    background-color: rgba(209, 234, 183, 1);
+    z-index: 0;
+}
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 170px;
+    height: 80px;
+    border-radius: 90px;
+    margin-right: 10px;
+}
+
+.searchButton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 80px;
+    text-decoration: none;
+    border-radius: 90px;
+    background-color: rgba(255, 72, 32, 1);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.searchButton a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px rgba(255, 72, 32, 1);
+    color: rgba(255, 72, 32, 1);
+}
+
+.searchButton .disabled {
+    color: rgba(98, 98, 98, 1);
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px rgba(98, 98, 98, 1);
+}
+
+.searchButton .disabled:hover {
+    color: rgba(98, 98, 98, 1);
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px rgba(98, 98, 98, 1);
+}

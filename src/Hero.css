@@ -1,0 +1,68 @@
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 545px;
+    width: 1470px;
+}
+
+.mainHero {
+    margin: 0 25px 0 25px;
+    height: 497px;
+    background-color: #3C39A0;
+    border-radius: 30px;
+    width: 1420px;
+}
+
+.heroContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [col-start]);
+    grid-template-rows: repeat(2, 1fr [row-start]);
+    column-gap: 30px;
+    height: 497px;
+    padding: 0 53px;
+    justify-items: center;
+}
+
+.cardsContainer {
+    grid-column: 1/ -1;
+    grid-row: span 1;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.heroText {
+    grid-column: 1/-1;
+    grid-row: span 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroText article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: "ttTravelsBlack", sans-serif;
+    font-size: 62px;
+}
+
+.heroText article p {
+    margin: 0;
+    padding: 0;
+}
+
+.heroText article p:first-child {
+    font-family: "ttTravelsDemi", sans-serif;
+}
+
+.heroText article p:last-child {
+    padding-bottom: 48px;
+    margin-top: -10px;
+}
