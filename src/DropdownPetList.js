@@ -12,7 +12,7 @@ export default function DropdownPetList({
     setPetTitle(petName);
     setOpenPet(false);
     setOpenBreed(true);
-    setInputPetText("")
+    setInputPetText("");
   };
 
   return (
