@@ -49,7 +49,7 @@ export default function SearchBar({
         </div>
       </section>
       <section className="searchButton">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href="/" target="_blank" rel="noopener noreferrer">
           <p>Find now</p>
         </a>
       </section>

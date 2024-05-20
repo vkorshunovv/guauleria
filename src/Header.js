@@ -11,13 +11,13 @@ export default function Header() {
           <div className="headerLinks">
             <menu className="menu">
               <li>
-                <a href="#">Our Standarts</a>
+                <a href="/">Our Standarts</a>
               </li>
               <li>
-                <a href="#">Find A Specialist</a>
+                <a href="/">Find A Specialist</a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <a href="/">Contact Us</a>
               </li>
             </menu>
           </div>
@@ -28,8 +28,8 @@ export default function Header() {
             <button className="userLogOut" type="button">
               Log out
             </button>
-            <a href="#">
-              <img src={userLogin} />
+            <a href="/">
+              <img src={userLogin} alt="User Avatar"/>
             </a>
           </div>
         </div>
@@ -39,29 +39,29 @@ export default function Header() {
           <div className="headerLinks">
             <menu className="menu">
               <li>
-                <a href="#">Pets</a>
+                <a href="/">Pets</a>
               </li>
               <li>
-                <a href="#">Shop</a>
+                <a href="/">Shop</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="/">Services</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="/">About</a>
               </li>
             </menu>
           </div>
           <div className="lastHeaderCol">
             <div className="clock">
               <div className="clockImg">
-                <img src={clock} />
+                <img src={clock} alt="Clock"/>
                 <p>24/7</p>
               </div>
             </div>
             <div className="location">
               <div className="locationImg">
-                <img src={location} />
+                <img src={location} alt="Location"/>
                 <p>Madrid</p>
               </div>
             </div>
