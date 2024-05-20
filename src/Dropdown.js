@@ -1,9 +1,10 @@
+import { useState } from "react";
 import DropdownPetList from "./DropdownPetList.js";
 import DropdownBreedList from "./DropdownBreedList.js";
 import "./Dropdown.css";
 import pet_search_1 from "../src/assets/Pet_1_search.png";
 import pet_search_2 from "../src/assets/Pet_2_search.png";
-import { useState, useRef, useEffect } from "react";
+
 
 export default function Dropdown({
   isOpenPet,
@@ -15,7 +16,6 @@ export default function Dropdown({
   setPetTitle,
   setBreedTitle,
   inputRef,
-  handleInputFocus,
 }) {
   const petsNameList = [
     "Dog",
@@ -41,15 +41,6 @@ export default function Dropdown({
   const [filteredPets, setFilteredPets] = useState(petsNameList);
   const [inputBreedText, setInputBreedText] = useState("");
   const [filteredBreed, setFilteredBreed] = useState(dogsBreedList);
-
-  // useEffect(() => {
-  //   if (isOpenPet) {
-  //     setInputPetText("");
-  //   }
-  //   if (isOpenBreed) {
-  //     setInputBreedText("");
-  //   }
-  // }, [isOpenPet, isOpenBreed]);
 
   const filteredPetText = (e) => {
     const searchText = e.target.value.toLowerCase();
@@ -78,7 +69,7 @@ export default function Dropdown({
         >
           <div className="petInnerContainer">
             <input
-              className={` ${filteredPets.length ? "" : "noMatch"} searchInput`}
+              className={`${filteredPets.length ? "" : "noMatch"} searchInput`}
               ref={inputRef}
               value={inputPetText}
               onInput={filteredPetText}

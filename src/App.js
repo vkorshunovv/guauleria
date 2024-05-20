@@ -13,7 +13,7 @@ function App() {
 
   const handleInputFocus = () => {
     inputRef.current.focus();
-    console.log('Focus click was triggered')
+    console.log("Focus click was triggered");
   };
 
   const [isOpenPet, setOpenPet] = useState(false);
@@ -34,7 +34,7 @@ function App() {
     function handleClickOutside(event) {
       if (
         petComponentRef.current &&
-        breedComponentRef &&
+        breedComponentRef.current &&
         !petComponentRef.current.contains(event.target) &&
         !breedComponentRef.current.contains(event.target) &&
         !event.target.className.includes("searchPet") &&

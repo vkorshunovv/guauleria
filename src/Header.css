@@ -61,7 +61,7 @@
 .lastHeaderCol {
     grid-column: col-start 10/ span 2;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     gap: 13px;
 }

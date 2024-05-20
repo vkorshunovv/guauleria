@@ -2,19 +2,16 @@ import "./SearchBar.css";
 import dogFace from "./assets/Dog Face.png";
 import dog from "./assets/Dog.png";
 
-import { useRef, useEffect } from "react";
-
 export default function SearchBar({
   revealPet,
   revealBreed,
   petTitle,
   breedTitle,
-  inputRef,
   handleInputFocus,
 }) {
   const scrollToBottom = () => {
     window.scrollTo({
-      top: 135,
+      top: 75,
       behavior: "smooth",
     });
   };
@@ -28,10 +25,6 @@ export default function SearchBar({
     revealBreed();
     scrollToBottom();
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  // }
 
   return (
     <form className="searchBar">
